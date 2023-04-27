@@ -4,6 +4,7 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
+        /* Estilização da calculadora */
         .calculator {
             margin: auto;
             width: 200px;
@@ -31,12 +32,15 @@
 <div class="calculator">
     <form method="post">
         <div class="form-group">
+            <!-- Campo de entrada para o primeiro número -->
             <input type="number" class="form-control" id="num1" name="num1" placeholder="Enter number 1">
         </div>
         <div class="form-group">
+            <!-- Campo de entrada para o segundo número -->
             <input type="number" class="form-control" id="num2" name="num2" placeholder="Enter number 2">
         </div>
         <div class="form-group">
+            <!-- Seleção da operação (adição ou subtração) -->
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                 <label class="btn btn-secondary active">
                     <input type="radio" name="operation" id="addition" value="addition" checked> +
@@ -46,13 +50,16 @@
                 </label>
             </div>
         </div>
+        <!-- Botão para submissão do formulário -->
         <button type="submit" class="btn btn-primary">Calculate</button>
     </form>
     <br>
     <div th:if="${result != null}" class="result">
+        <!-- Exibição do resultado, caso haja um -->
         The result is <span th:text="${result}"></span>.
     </div>
 </div>
+<!-- Importação de bibliotecas -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
